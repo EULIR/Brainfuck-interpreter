@@ -26,8 +26,10 @@ public class Parser {
 	}
 
 	public void interpret() {
+		int[] match = match(code);
 		for (int i = 0; i < code.length; i++) {
 			char c = code[i];
+			short value = array[index];
 			switch (c) {
 				case Token.LESS_THAN:
 					index--;
@@ -38,10 +40,10 @@ public class Parser {
 					if (index > array.length) expand();
 					break;
 				case Token.PLUS:
-					array[index] = (short) (((int) c == Token.MAX_ROOM) ? Token.MIN_ROOM : ++c);
+					array[index] = ((int) value == Token.MAX_ROOM) ? Token.MIN_ROOM : ++value;
 					break;
 				case Token.MIUS:
-					array[index] = (short) (((int) c == Token.MIN_ROOM) ? Token.MAX_ROOM : --c);
+					array[index] = ((int) value == Token.MIN_ROOM) ? Token.MAX_ROOM : --value;
 					break;
 				case Token.DOT:
 					System.out.print((char) array[index]);
@@ -50,8 +52,12 @@ public class Parser {
 					array[index] = (short) sc.next().charAt(0);
 					break;
 				case Token.OPEN_BRACKET:
+					if (value == 0)
+						i = match[i];
 					break;
 				case Token.END_BRACKET:
+					if (value != 0)
+						i = match[i];
 					break;
 			}
 		}

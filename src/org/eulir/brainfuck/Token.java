@@ -4,7 +4,7 @@ public final class Token {
 	public static final char LESS_THAN = '<';
 	public static final char MORE_THAN = '>';
 	public static final char PLUS = '+';
-	public static final char MIUS = '-';
+	public static final char MINUS = '-';
 	public static final char DOT = '.';
 	public static final char COMMA = ',';
 	public static final char OPEN_BRACKET = '[';

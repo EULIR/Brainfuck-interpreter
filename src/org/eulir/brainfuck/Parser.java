@@ -42,7 +42,7 @@ public class Parser {
 				case Token.PLUS:
 					array[index] = ((int) value == Token.MAX_ROOM) ? Token.MIN_ROOM : ++value;
 					break;
-				case Token.MIUS:
+				case Token.MINUS:
 					array[index] = ((int) value == Token.MIN_ROOM) ? Token.MAX_ROOM : --value;
 					break;
 				case Token.DOT:

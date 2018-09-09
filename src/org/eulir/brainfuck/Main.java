@@ -21,7 +21,7 @@ public class Main {
 	}
 
 	public static void run(){
-		readFileByLines("");
+		readFileByLines("./code/HelloWorld.bf");
 		Parser p = new Parser(code.toCharArray());
 		p.interpret();
 	}

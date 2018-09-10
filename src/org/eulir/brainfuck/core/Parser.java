@@ -1,4 +1,4 @@
-package org.eulir.brainfuck;
+package org.eulir.brainfuck.core;
 
 import org.eulir.brainfuck.error.IndexOutOfBoundError;
 import org.eulir.brainfuck.error.MissBracketError;
@@ -49,6 +49,7 @@ public class Parser {
 					System.out.print((char) array[index]);
 					break;
 				case Token.COMMA:
+					System.out.println("Please input:");
 					array[index] = (short) sc.next().charAt(0);
 					break;
 				case Token.OPEN_BRACKET:

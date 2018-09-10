@@ -1,4 +1,4 @@
-package org.eulir.brainfuck;
+package org.eulir.brainfuck.core;
 
 public class Bracket {
 	private int position;

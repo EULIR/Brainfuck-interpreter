@@ -1,4 +1,4 @@
-package org.eulir.brainfuck;
+package org.eulir.brainfuck.core;
 
 public final class Token {
 	public static final char LESS_THAN = '<';

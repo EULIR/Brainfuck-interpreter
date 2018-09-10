@@ -1,5 +1,7 @@
 package org.eulir.brainfuck;
 
+import org.eulir.brainfuck.core.Parser;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -21,7 +23,7 @@ public class Main {
 	}
 
 	public static void run(){
-		readFileByLines("./code/HelloWorld.bf");
+		readFileByLines("./code/OneDigitPlus.bf");
 		Parser p = new Parser(code.toCharArray());
 		p.interpret();
 	}

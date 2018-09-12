@@ -31,7 +31,7 @@ A HelloWorld program looks like this, consisting of only eight types of commands
 - Native Brainfuck grammar interpretation
 
 ## Sample syntax errors and corresponding reports in the interpreter
-- Index out of bound
+- Index out of bound  
 Index out of bound exception would only occur when in the index of cells comes to -1, with no maximum limit would be made.
     - code example
     ```brainfuck
@@ -41,7 +41,7 @@ Index out of bound exception would only occur when in the index of cells comes t
     ```
     IndexOutOfBoundError: Index out of bound: -1
     ```
-- Unclosed left or right bracket
+- Unclosed left or right bracket  
 Brainfuck syntax would only allow left brackets and right brackets that appear in pairs.
     - code example
     ```brainfuck

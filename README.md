@@ -42,7 +42,8 @@ Index out of bound exception would only occur when in the index of cells comes t
     IndexOutOfBoundError: Index out of bound: -1
     ```
 - Unclosed left or right bracket  
-Brainfuck syntax would only allow left brackets and right brackets that appear in pairs.
+Brainfuck syntax would only allow left brackets and right brackets that appear in pairs.  
+Following the Java convention, the index number reported in the Error information starts from 0.  
     - code example
     ```brainfuck
     ++[+[++[>>+<
@@ -56,12 +57,13 @@ Brainfuck syntax would only allow left brackets and right brackets that appear i
     ```
     - code example
     ```brainfuck
-    ++]][]
+    ++]
+    ][]
     ```
     - error report
     ```
     Unclosed ] in line 1 index 2
-    Unclosed ] in line 1 index 3
+    Unclosed ] in line 2 index 0
     MissBracketError: Error information has been listed above
     ```
 

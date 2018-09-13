@@ -1,6 +1,7 @@
 package org.eulir.brainfuck;
 
 import org.eulir.brainfuck.core.Parser;
+import org.eulir.brainfuck.error.FileTypeMismatchError;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,10 +14,13 @@ public class Main {
 
 	public static void readFileByLines(String fileName) {
 		File file = new File(fileName);
+		String name = file.getName();
+		if (!name.substring(name.length() - 2).equals("bf"))
+			throw new FileTypeMismatchError();
 		StringBuilder sb = new StringBuilder();
 		try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
 			String tempString;
-			while ((tempString = reader.readLine()) != null) sb.append(tempString);
+			while ((tempString = reader.readLine()) != null) sb.append(tempString).append("\n");
 			code = sb.toString();
 		} catch (IOException e) {
 			e.printStackTrace();

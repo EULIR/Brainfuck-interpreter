@@ -37,7 +37,7 @@ public class Parser {
 					break;
 				case Token.MORE_THAN:
 					index++;
-					if (index >= array.length) expand();
+					if (index == array.length) expand();
 					break;
 				case Token.PLUS:
 					array[index] = ((int) value == Token.MAX_ROOM) ? Token.MIN_ROOM : ++value;

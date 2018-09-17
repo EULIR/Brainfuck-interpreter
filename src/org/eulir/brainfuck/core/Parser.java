@@ -99,7 +99,7 @@ public class Parser {
 		}
 		error.addAll(left);
 		if (!error.isEmpty()) {
-			error.forEach(System.err::println);
+			error.stream().map(Bracket::error).forEach(System.err::println);
 			throw new MissBracketError("Error information has been listed above");
 		}
 		return matchBracket;

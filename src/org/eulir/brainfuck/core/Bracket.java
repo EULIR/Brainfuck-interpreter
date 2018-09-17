@@ -13,10 +13,10 @@ public class Bracket {
 		indexInLine = index;
 	}
 
-	@Override
-	public String toString() {
+	public String error() {
 		return "Unclosed " + bracket + " in line " + lineNum + " index " + indexInLine + "\n";
 	}
+
 
 	public int getPos() {
 		return position;
